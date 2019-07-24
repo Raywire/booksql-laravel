@@ -37,7 +37,7 @@ Simply run
 ```php
 composer seed
 ```
-## Queries and Mutations
+# Queries
 
 ## Fetch books
 
@@ -133,6 +133,39 @@ Search book by author
 query {
   searchQuery(search: "Ryan") {
     title
+  }
+}
+```
+# Mutations
+
+## Create a category
+```
+mutation {
+  createCategory(name: "Heath") {
+    id
+    name
+  }
+}
+```
+
+## Update a category
+
+```
+mutation {
+  updateCategory(id:7, name: "Health") {
+    id
+    name
+  }
+}
+```
+
+## Delete a category
+
+```
+mutation {
+  deleteCategory(id:7){
+    id
+    name
   }
 }
 ```
