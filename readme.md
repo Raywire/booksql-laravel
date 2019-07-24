@@ -22,10 +22,14 @@ php artisan serve
 ```
 
 ## Testing Environment
+First install graphql-playground
+```php
+composer require mll-lab/laravel-graphql-playground
+```
+
 Visit http://127.0.0.1:8000/graphql-playground on your browser to test the API
 
-Alternatively you can use Postman or Insomnia
-
+Alternatively you can use Postman, Insomnia or GraphQL Playground apps
 Use this url: http://localhost:8000/graphql
 
 ## Seeding the database
@@ -35,3 +39,41 @@ composer seed
 ```
 ## Queries and Mutations
 
+## Fetch books
+
+```
+query {
+  books {
+    id
+    title
+    author
+    description
+    image
+    link
+    description
+    featured
+    category {
+      name
+    }
+  }
+}
+```
+
+## Fetch a single book
+```
+query {
+  book(id: 1) {
+    id
+    title
+    author
+    description
+    image
+    link
+    description
+    featured
+    category {
+      name
+    }
+  }
+}
+```

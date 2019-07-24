@@ -7,6 +7,8 @@ scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 type Query {
     users: [User!]! @paginate(type: "paginator" model: "App\\User")
     user(id: ID @eq): User @find(model: "App\\User")
+    books: [Book] @all
+    book(id: ID @eq): Book @find(model: "App\\Book")
 }
 
 type Mutation {
