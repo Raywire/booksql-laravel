@@ -121,3 +121,18 @@ query {
   }
 }
 ```
+
+# Custom resolver
+If you don't want to use directives you can create your own custom resolvers
+Create it using artisan command
+```php
+php artisan lighthouse:query searchQuery
+```
+Search book by author
+```
+query {
+  searchQuery(search: "Ryan") {
+    title
+  }
+}
+```

@@ -10,6 +10,7 @@ type Query {
     books: [Book] @all
     book(id: ID @eq): Book @find
     booksByFeatured(featured: Boolean! @eq): [Book] @all
+    searchQuery(search:String!): [Book]
     categories: [Category] @all
     category(id: ID @eq): Category @find
 }
