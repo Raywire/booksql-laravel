@@ -76,4 +76,40 @@ query {
     }
   }
 }
+
+```
+## Fetch all categories
+```
+query {
+  categories {
+    name
+  }
+}
+```
+
+## Fetch a single category
+```
+query {
+  category(id: 1) {
+    name
+  }
+}
+```
+
+## Fetch all books in a category
+```
+query {
+  category(id:1) {
+    id
+    name
+    books {
+      id
+      image
+      link
+      category {
+        name
+      }
+    }
+  }
+}
 ```

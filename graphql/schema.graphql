@@ -8,7 +8,9 @@ type Query {
     users: [User!]! @paginate(type: "paginator" model: "App\\User")
     user(id: ID @eq): User @find(model: "App\\User")
     books: [Book] @all
-    book(id: ID @eq): Book @find(model: "App\\Book")
+    book(id: ID @eq): Book @find
+    categories: [Category] @all
+    category(id: ID @eq): Category @find
 }
 
 type Mutation {
