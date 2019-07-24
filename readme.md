@@ -169,3 +169,43 @@ mutation {
   }
 }
 ```
+
+## Create a book
+```
+mutation {
+  createBook(
+    title: "Endgame beats Avatar"
+    author: "Ryan Wire"
+    category_id: 3
+  ) {
+    id
+    title
+  }
+}
+```
+
+## Update a book
+```
+mutation {
+  updateBook(
+    id: 31
+    title: "Endgame"
+    author: "Ryan Wire"
+    category_id: 1
+  ) {
+    id
+    title
+  }
+}
+```
+
+## Delete a book
+```
+mutation {
+  deleteBook(id:31){
+    id
+    title
+    author
+  }
+}
+```
