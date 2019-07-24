@@ -113,3 +113,11 @@ query {
   }
 }
 ```
+## Fetch all featured books
+```
+query {
+  booksByFeatured(featured: true) {
+    title
+  }
+}
+```
