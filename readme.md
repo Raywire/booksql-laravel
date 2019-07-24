@@ -59,6 +59,37 @@ query {
 }
 ```
 
+## Fetch books with pagination
+```
+query {
+  books(count: 10 page: 2) {
+    data {
+      id
+      title
+      author
+      description
+      image
+      link
+      description
+      featured
+      category {
+        name
+      }
+    }
+    paginatorInfo {
+      count
+      currentPage
+      firstItem
+      hasMorePages
+      lastItem
+      lastPage
+      perPage
+      total
+    }
+  }
+}
+```
+
 ## Fetch a single book
 ```
 query {
