@@ -271,3 +271,8 @@ mutation {
   }
 }
 ```
+
+## Heroku Link
+[Hosted Here](https://booksql-laravel.herokuapp.com)
+
+Graphql endpoint - https://booksql-laravel.herokuapp.com/graphql
