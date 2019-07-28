@@ -90,6 +90,37 @@ query {
 }
 ```
 
+## Fetch books with ordering
+```
+query {
+  books(count: 30, page: 1, orderBy: [{ field: "created_at", order: ASC }]) {
+    data {
+      id
+      title
+      author
+      description
+      image
+      link
+      description
+      featured
+      category {
+        name
+      }
+    }
+    paginatorInfo {
+      count
+      currentPage
+      firstItem
+      hasMorePages
+      lastItem
+      lastPage
+      perPage
+      total
+    }
+  }
+}
+```
+
 ## Fetch a single book
 ```
 query {
